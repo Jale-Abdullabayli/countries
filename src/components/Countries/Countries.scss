@@ -1,0 +1,73 @@
+.countries {
+  padding: 50px 100px;
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .inputControl {
+      display: flex;
+      align-items: center;
+      padding: 20px 10px;
+      border-radius: 5px;
+      box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+      input {
+        border: none;
+        outline: none;
+        padding-left: 10px;
+      }
+    }
+    .filter {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+      padding: 20px 10px;
+      border-radius: 5px;
+      position: relative;
+      &:hover{
+        .regions{
+          opacity: 1;
+          pointer-events: auto;
+        }
+      }
+
+      span {
+        margin-right: 10px;
+      }
+      .regions {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+        border-radius: 5px;
+        padding: 20px 0;
+        width: 100%;
+        // margin-top: 5px;
+        background-color: white;
+        opacity: 0;
+        transition: .3s;
+        pointer-events: none;
+        span {
+          display: block;
+          padding: 5px 10px;
+          width: 100%;
+          transition: 0.3s;
+          &:hover {
+            background-color: lightgray;
+          }
+        }
+      }
+    }
+  }
+  .countryList {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .country {
+      width: 25%;
+      margin-bottom: 20px;
+    }
+  }
+}
